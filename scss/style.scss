@@ -1,0 +1,88 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Domine|EB+Garamond');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+
+/* Colours */
+$primary: rgba(255,255,255,1);
+$background: rgba(255, 255, 255, 0.2);
+
+body{
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+}
+
+p{
+  font-family: 'Domine', serif;
+  margin: 0 30px;
+}
+
+.image{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../lake.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.section{
+  background-color: $background;
+  height: 50vh;
+  position: relative;
+  margin: 50vh 0;
+  height: 400px;
+}
+
+/* Slider */
+.slider-wrap {
+  width: 100vw;
+  margin: 0;
+}
+
+.slider {
+  background: $background;
+  overflow-x: scroll;
+}
+
+.holder {
+  width: 300%;
+  display: flex;
+  flex-direction: row;
+}
+
+.slide {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-position: -100px 0;
+}
+
+.slide div{
+  width: 50%;
+}
+
+.gif{
+  margin: 20px;
+}
+
+.gif img{
+  width:100%;
+  border-radius: 5px;
+  border: 2px solid $primary;
+}
+
+.project-description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+.devicon-javascript-plain:before{
+  color: primary;
+  font-size: 56px;
+  border-radius: 5px;
+}
