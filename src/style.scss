@@ -5,23 +5,40 @@
 /* Colours */
 $primary: rgba(255,255,255,1);
 $background: rgba(255, 255, 255, 0.2);
+$gradient1: #085078;
+$gradient2: #85d8ce;
+$gradient3: #808080;
+$gradient4: #ffffff;
 
 body{
   margin: 0;
+  color: white;
   font-family: 'EB Garamond', serif;
+  overflow: visible !important;
+  background: -webkit-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
+  // background: -moz-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
+  // background: -ms-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
+  // background: -o-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
+  // background: linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
 }
 
-// Hero Image
-.image{
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("../lake.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
+.icon {
+  color: $primary;
+  font-size: 56px;
+  border-radius: 5px;
+  margin: 20px;
 }
+// Hero Image
+// .image{
+//   position: fixed;
+//   top: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   background-image: url("../lake.jpg");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   z-index: -1;
+// }
 
 // Section Text
 .section > p{
@@ -35,6 +52,13 @@ body{
   position: relative;
   margin: 50vh 0;
   height: 400px;
+}
+
+// Project Icon
+.project-icon{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 /* Slider */
@@ -61,7 +85,9 @@ body{
   position: relative;
   background-position: -100px 0;
 }
-
+#slide2{
+  left: 0
+}
 .slide > div{
   width: 50%;
 }
@@ -128,10 +154,4 @@ body{
   border-radius: 5px;
   color: $primary;
   transform: rotateY(180deg);
-}
-
-.icon {
-  color: $primary;
-  font-size: 56px;
-  border-radius: 5px;
 }
