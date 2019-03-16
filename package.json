@@ -6,7 +6,8 @@
   "author": "3jtechno <3j.techno@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "serve": "webpack-dev-server"
+    "serve": "webpack-dev-server",
+    "build": "webpack -p"
   },
   "dependencies": {
     "@babel/core": "^7.3.4",
