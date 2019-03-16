@@ -10,6 +10,20 @@ $gradient2: #85d8ce;
 $gradient3: #808080;
 $gradient4: #ffffff;
 
+//Coming soon page
+
+.coming-soon{
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+  background: -webkit-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
 body{
   margin: 0;
   color: white;
