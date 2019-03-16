@@ -14,7 +14,7 @@ const plugins = [
 module.exports = {
   entry: './src/app.js',
   output: {
-    path: path.resolve('dist'),
+    path: path.resolve(''),
     filename: 'bundle.js',
     publicPath: '/'
   },
