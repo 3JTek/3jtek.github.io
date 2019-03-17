@@ -11,17 +11,17 @@ $gradient3: #808080;
 $gradient4: #ffffff;
 
 //Coming soon page
-
-.coming-soon{
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-  background: -webkit-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+//
+// .coming-soon{
+//   color: white;
+//   font-family: "Courier New", Courier, monospace;
+//   font-size: 25px;
+//   background: -webkit-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+// }
 
 
 body{
@@ -76,13 +76,16 @@ body{
 }
 
 /* Slider */
+.section.projects{
+  background: transparent;
+}
+
 .slider-wrap {
   width: 100vw;
   margin: 0;
 }
 
 .slider {
-  background: $background;
   overflow-x: scroll;
 }
 
@@ -93,15 +96,15 @@ body{
 }
 
 .slide {
-  width: 100vw;
+  background: $background;
+  width: 85vw;
+  height: 400px;
+  margin: 0 2vw;
   display: flex;
   flex-direction: row;
   position: relative;
-  background-position: -100px 0;
 }
-#slide2{
-  left: 0
-}
+
 .slide > div{
   width: 50%;
 }
