@@ -5,7 +5,7 @@ let canScroll = true
 function init(){
 
   const slider = $('.slider')
-  const slideWidth = 0.835 * slider[0].scrollWidth / 3
+  const slideWidth = slider[0].scrollWidth / 3
   // slider[0].scrollLeft = -0.01 * slider[0].scrollWidth / 3
   slider.bind('mousewheel DOMMouseScroll', scrollSlide)
 
@@ -13,7 +13,7 @@ function init(){
     const deltaX = e.originalEvent.deltaX
     if(deltaX) e.preventDefault()
 
-    if(Math.abs(deltaX) > 10 && canScroll) {
+    if(Math.abs(deltaX) > 15 && canScroll) {
 
       canScroll = false
 
