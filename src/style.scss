@@ -1,8 +1,10 @@
-/* Fonts */
+//------------------Fonts------------------
 @import url('https://fonts.googleapis.com/css?family=Domine|EB+Garamond');
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+$font-primary: 'EB Garamond', serif;
+$font-secondary: 'Domine|EB+Garamond';
 
-/* Colours */
+//------------------Colors------------------
 $primary: rgba(255,255,255,1);
 $background: rgba(255, 255, 255, 0.2);
 $gradient1: #085078;
@@ -10,7 +12,66 @@ $gradient2: #85d8ce;
 $gradient3: #808080;
 $gradient4: #ffffff;
 
-//Coming soon page
+//------------------General------------------
+*{
+  box-sizing: border-box;
+}
+
+h1, h2, a{
+  font-family: $font-primary;
+  text-decoration: none;
+  color: $primary;
+}
+
+p{
+  font-family: $font-secondary;
+  color: $primary;
+}
+
+body{
+  margin: 0;
+  overflow: visible !important;
+  background: -webkit-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
+  background: -moz-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
+  background: -ms-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
+  background: -o-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
+  background: linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
+}
+
+// Hero Image
+// .image{
+//   position: fixed;
+//   top: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   background-image: url("../lake.jpg");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   z-index: -1;
+// }
+
+.section{
+  background-color: $background;
+  height: 50vh;
+  position: relative;
+  margin: 50vh 0;
+  height: 400px;
+}
+
+.icon {
+  color: $primary;
+  font-size: 50px;
+  border-radius: 5px;
+  width:50px; //for airbnb image
+}
+
+@media screen and (max-width: 480px) {
+  .section{
+    height: auto;
+    margin: 25vh 0;
+  }
+}
+//------------------Coming soon page------------------
 //
 // .coming-soon{
 //   color: white;
@@ -23,50 +84,55 @@ $gradient4: #ffffff;
 //   height: 100vh;
 // }
 
-
-body{
-  margin: 0;
-  color: white;
-  font-family: 'EB Garamond', serif;
-  overflow: visible !important;
-  background: -webkit-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
-  // background: -moz-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
-  // background: -ms-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
-  // background: -o-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
-  // background: linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
-}
-h2{
-  margin:0;
-}
-// Hero Image
-// .image{
-//   position: fixed;
-//   top: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   background-image: url("../lake.jpg");
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   z-index: -1;
-// }
-.test{
-  background-image: url("https://user-images.githubusercontent.com/39668354/54499825-fc6e4b80-490d-11e9-9d73-c0414f822127.png");
-}
-// Section Text
-.section > p{
-  font-family: 'Domine', serif;
-  margin: 0 30px;
+//------------------Section intro------------------
+.intro{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
 }
 
-.section{
-  background-color: $background;
-  height: 50vh;
-  position: relative;
-  margin: 50vh 0;
-  height: 400px;
+//------------------Section skills------------------
+.skills{
+  text-align: center;
+  & .skills-container{
+    display: flex;
+    & .skill-category{
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-around;
+      width: 25%;
+      margin: 10px;
+      padding: 20px;
+      border: 2px $primary solid;
+      border-radius: 5px;
+      & .icon-container{
+        width:50px;
+        height: 50px;
+        margin: 20px;
+      }
+    }
+  }
 }
 
-/* Slider */
+@media screen and (max-width: 480px) {
+  .skills{
+    & .skills-container{
+      flex-direction: column;
+      & .skill-category{
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+        border-top: 2px solid $primary;
+      }
+    }
+  }
+}
+
+//------------------Slider------------------
 .section.projects{
   background: transparent;
   & .slider-wrap {
@@ -88,9 +154,9 @@ h2{
           position: relative;
         }
         & .slide > div{
-          width: 50%;
           display: flex;
           align-items: center;
+          width: 50%;
         }
         & .gif{
           margin: 20px;
@@ -110,6 +176,9 @@ h2{
             align-items: center;
             text-align: justify;
             margin: 0 20px;
+            & p{
+              margin: 0 30px;
+            }
           }
         }
       }
@@ -117,18 +186,54 @@ h2{
   }
 }
 
-// Flipping Box
-.icon {
-  color: $primary;
-  font-size: 50px;
-  border-radius: 5px;
-  width:50px; //for airbnb image
+@media screen and (max-width: 480px) {
+  .section.projects{
+    & .slider-wrap {
+      & .slider {
+        overflow-x:hidden;
+        & .holder {
+          width: 100%;
+          flex-direction: column;
+          & .slide {
+            width: 100vw;
+            height: auto;
+            margin: 20px 0;
+            flex-direction: column;
+          }
+          & .slide > div{
+            flex-direction: column;
+            width: 100%;
+          }
+          & .gif{
+            width: 100%;
+            margin: 20px 0;
+            & img{
+              border-radius: 0;
+              border: none;
+            }
+          }
+          & .container-project-description{
+            flex-direction: column;
+            order: -1;
+            & .project-description{
+              margin: 0;
+              & p{
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
+//------------------Flipping Box------------------
 .project-icon{
   width: 100%;
   display:flex;
   justify-content: space-around;
+  margin: 20px;
   & .flip-box {
     background-color: transparent;
     width: 50px;
@@ -172,3 +277,16 @@ h2{
 .flip-box:hover .flip-box-inner {
   transform: rotateY(180deg);
 }
+
+//------------------Section contacts------------------
+.contacts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & > *{
+    margin: 10px;
+  }
+}
+
+//------------------Responsivness------------------

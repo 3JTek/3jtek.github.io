@@ -11,8 +11,12 @@ function init(){
 
   function scrollSlide(e){
     const deltaX = e.originalEvent.deltaX
-    if(deltaX) e.preventDefault()
 
+    //Prevent any normal scrolling
+    if(deltaX) e.preventDefault()
+    //Prevent sliding logic in mobile view
+    if(slideWidth <= 480) return
+    //Make sure the user wants to scroll horizontally
     if(Math.abs(deltaX) > 15 && canScroll) {
 
       canScroll = false
