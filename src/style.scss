@@ -73,24 +73,28 @@ body{
 }
 //------------------Coming soon page------------------
 //
-// .coming-soon{
-//   color: white;
-//   font-family: "Courier New", Courier, monospace;
-//   font-size: 25px;
-//   background: -webkit-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100vh;
-// }
-
-//------------------Section intro------------------
-.intro{
-  text-align: center;
+.coming-soon{
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+  background: -webkit-linear-gradient(45deg, $gradient1 10%, $gradient2 90%);
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+}
+
+//------------------Section intro------------------
+.intro{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   font-size: 48px;
+  & p, h1{
+    margin: 0;
+  }
 }
 
 //------------------Section skills------------------
@@ -284,6 +288,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
   & > *{
     margin: 10px;
   }
