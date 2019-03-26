@@ -12,7 +12,8 @@ const plugins = [
 ]
 
 module.exports = {
-  entry: './src/app.js',
+  //WebpackHotDevClient allows to add an overlay to be able to see the error direclty inside the browser.
+  entry: [require.resolve('react-dev-utils/webpackHotDevClient'),'./src/app.js'],
   output: {
     path: path.resolve(''),
     filename: 'bundle.js',
