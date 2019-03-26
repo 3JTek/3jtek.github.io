@@ -17,7 +17,7 @@ const plugins = [
 console.log('node_env', process.env.NODE_ENV)
 module.exports = {
   //WebpackHotDevClient allows to add an overlay to be able to see the error direclty inside the browser.
-  entry: [process.env.NODE_ENV === 'production' && require.resolve('react-dev-utils/webpackHotDevClient'),'./src/app.js'],
+  entry: [process.env.NODE_ENV === 'staging' && require.resolve('react-dev-utils/webpackHotDevClient'),'./src/app.js'].filter(Boolean),
   output: {
     path: path.resolve(''),
     filename: 'bundle.js',

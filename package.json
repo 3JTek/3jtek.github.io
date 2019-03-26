@@ -6,7 +6,7 @@
   "author": "3jtechno <3j.techno@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "serve": "webpack-dev-server",
+    "serve": "NODE_ENV=staging webpack-dev-server",
     "build": "NODE_ENV=production webpack -p"
   },
   "dependencies": {
